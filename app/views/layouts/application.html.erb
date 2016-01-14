@@ -10,7 +10,8 @@
 </head>
 <body>
 <header id="main_navigation"class="clearfix">
-	<a href="#" class="name">Jasmeet Singh</a>
+	<%= link_to "Jasmeet Singh", root_path, class: "name" %>
+	
 	<nav>
 		<%= link_to "Articles",posts_path %>
 
@@ -22,6 +23,14 @@
 </header>
 
 <%= yield %>
+<footer id="main_footer">
+		<p class="copyright">&copy; 2016 Jasmeet Singh</p>
+		<nav>
+			<a href=""><i class="fa fa-linkedin"target="_blank"></i></a>
+			<a href=""><i class="fa fa-facebook"target="_blank"></i></a>
+			<a href=""><i class="fa fa-github"target="_blank"></i></a>
+		</nav>
+	</footer>
 
 </body>
 </html>
