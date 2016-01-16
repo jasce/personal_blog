@@ -1,10 +1,14 @@
 #posts_wrapper{
-	padding: 3em 0;
+	padding: 2em 0;
 	.post{
 	text-align:center;
-	date{
-		font-size: .9em;
+	.date{
+		
+	margin: 0px 0px 0.8em;
+	font-size: .89em;
+	color: $light;
 	}
+	
 	h2{
 	margin: 0;
 	text-transform: uppercase;
@@ -13,7 +17,7 @@
 	text-decoration: none;
 	color: $dark;
 	&:hover{
-	color:highlight;
+	color: $highlight;
 	}
 	}
 	}
