@@ -7,7 +7,10 @@
 	<div id="content">
 		<%= markdown @project.description %>
 		<div class="button_wrapper"> 
-		<a href="<%= @project.link %>" class="project_button"target="_blank">Visit at <%= @project.title %></a>
+		
+		<!--<a href="<%= @project.link%>"class="project_button"target="_blank">Visit at <%= @project.title%></a>-->
+		<%=link_to "Visit at #{@project.title}","http://#{@project.link}", class: :project_button, target: :_blank%>
+
 		</div>
 	</div>
 	<% if user_signed_in? %>
