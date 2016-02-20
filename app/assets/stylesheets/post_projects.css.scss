@@ -116,6 +116,13 @@
 	}
 
 }
+#links{
+	color: $highlight;
+	font-weight: 600;
+	&:hover{
+	color: $light;
+	}
+}
 #disqus_style{
 	padding: 30px;
 	
