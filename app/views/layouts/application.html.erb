@@ -13,6 +13,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="back">
 <header id="main_navigation"class="clearfix">
 	<%= link_to "Jasmeet Singh", root_path, class: "name" %>
 	
@@ -30,6 +31,7 @@
 	</nav>
 	
 </header>
+
 	<% if notice %>
 	 <p class="notice"><%= notice %></p>
 	 <% elsif alert %>
@@ -39,6 +41,7 @@
 
 
 <%= yield %>
+
 <footer id="main_footer">
 		<p class="copyright">&copy; 2016 Jasmeet Singh</p>
 		<nav>
@@ -47,6 +50,6 @@
 			<a href=""><i class="fa fa-github"target="_blank"></i></a>
 		</nav>
 	</footer>
-
+</div>
 </body>
 </html>
