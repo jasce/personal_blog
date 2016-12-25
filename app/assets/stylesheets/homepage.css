@@ -1,4 +1,6 @@
-
+html{
+	background-color: #e9e9e9;
+}
 .navbar-brand{
 	letter-spacing: 4px;
 	text-transform: uppercase;	
@@ -6,7 +8,7 @@
 }
 .navbar{
 	z-index: 999;
-	
+
 }
 html .banner{
 	background-size: cover;
@@ -38,7 +40,7 @@ html .banner h2{
 	font-weight: 600;
 	letter-spacing: 2.5px;
 	left: 25%;
-	position: fixed;
+	position: absolute;
 	z-index: 999;
 }
 html .banner span#rotate{

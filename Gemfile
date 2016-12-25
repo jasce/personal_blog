@@ -30,6 +30,8 @@ gem 'devise'
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 gem 'github_api'
 gem 'bootstrap', '~> 4.0.0.alpha5'
+gem "font-awesome-rails"
+
 
 
 

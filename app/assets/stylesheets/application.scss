@@ -1,6 +1,23 @@
 @import "bootstrap";
 @import "homepage";
+@import "font-awesome";
+
 body{
 	font-family: 'Raleway', sans-serif;
 	margin-top:10px;
+}
+.footer{
+	position: absolute;
+	top: 655px;
+	left:0;
+	right: 0;
+	background-color: #161616;
+}
+.footer .container{
+	padding:45px 15px 5px 15px;
+}
+.footer i{
+	margin-right:30px;
+	color: #aaa;
+	font-size: 20px;
 }
