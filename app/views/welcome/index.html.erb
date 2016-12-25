@@ -1,29 +1,26 @@
-<div class="wrapper wrapper_padding clearfix">
-	<div class="col-1 homepage_content about">
-		<h2>About</h2>
-		<hr>
-		<p>I'm a developer &amp; Computer Science Engineering Student living in Subhash Nagar, New Delhi.</p>
-		<p>I am currently pursuing my B.tech from Guru Tegh Bahadur Institute Of Technology </p>
-		<p> You can find me chatting on <a id="links" href="https://www.facebook.com/jayz1995"target="_blank">Facebook</a> &amp; sharing some code on <a href=""id="links"target="_blank">Github.</a></p>
 
-	</div>
-	<div class="col-2 homepage_content">
-			
-	<h2>Stuff I've Written</h2>
-	<hr>
-	<% @posts.each do |post| %>
-	<h3><a href=""><%= link_to post.title,post %></a></h3>
-	<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
-	<% end %>
 	
 
-	</div>
-	<div class="col-3 homepage_content">
-	<h2>Stuff I've Built</h2>
-	<hr>
-	<% @projects.each do |project| %>
-	<h3><a href=""><%= link_to project.title,project %></a></h3>
-	<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
-	<% end %>
-	</div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 link_to post.title,post 
+	 post.created_at.strftime("%A, %b %d") 
+	link_to project.title,project
+	 project.created_at.strftime("%A, %b %d") 
+

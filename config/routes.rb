@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'github/index'
+
   devise_for :users
  resources :posts
  resources :projects
