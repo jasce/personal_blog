@@ -1,0 +1,46 @@
+
+.navbar-brand{
+	letter-spacing: 4px;
+	text-transform: uppercase;	
+	padding: 8px 13px;	
+}
+.navbar{
+	z-index: 999;
+	
+}
+html .banner{
+	background-size: cover;
+	height: 650px;
+	z-index: 0;
+}
+html .main-banner{
+	background-color: #222;
+	background: url('intro-bg.jpg') no-repeat center center;
+	background-size: cover;
+	/*-webkit-filter: blur(0.95px);
+  -moz-filter: blur(0.95px);
+  -o-filter: blur(0.95px);
+  -ms-filter: blur(0.95px);
+  filter: blur(0.95px);*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+html .banner .overlay{
+	background-size: cover;
+	background: url('intro-bg.jpg') no-repeat center center;
+}
+html .banner h2{
+	padding-top: 300px;
+	font-size: 48px;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 2.5px;
+	left: 25%;
+	position: fixed;
+	z-index: 999;
+}
+html .banner span#rotate{
+	color: #ff6600;
+}
