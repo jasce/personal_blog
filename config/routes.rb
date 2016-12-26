@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'resume/index'
+
   get 'github/index'
 
   devise_for :users

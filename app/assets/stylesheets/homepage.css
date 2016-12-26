@@ -24,10 +24,7 @@ html .main-banner{
   -o-filter: blur(0.95px);
   -ms-filter: blur(0.95px);
   filter: blur(0.95px);*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  
 }
 html .banner .overlay{
 	background-size: cover;
