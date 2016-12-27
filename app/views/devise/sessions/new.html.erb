@@ -1,29 +1,35 @@
+<p style="padding: 40px;"></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+        <h1  class="title">Log in</h1>
+       
 
 
-<h1 id ="page-title">Log in</h1><div class="skinny_wrapper wrapper_padding">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group col-md-6 offset-md-3">
+            <%= f.label :email ,class: ' col-form-label'%><br />
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
 
+          <div class="form-group col-md-6 offset-md-3">
+            <%= f.label :password ,class: ' col-form-label' %><br />
+            <%= f.password_field :password, autocomplete: "off" , class: 'form-control'%>
+          </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+          <% if devise_mapping.rememberable? -%>
+            <div class="form-group col-md-6 offset-md-3">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%><br>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+          <div class="col-md-6 offset-md-3" style="margin-bottom: 40px;">
+            <%= f.submit "Log in" ,class: 'btn btn-outline-primary about-btn '%>
+          </div>
+        <% end %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
     </div>
-  <% end -%><br>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
 </div>
+

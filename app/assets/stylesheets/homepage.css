@@ -51,3 +51,6 @@ html .banner h2{
 	
 	}
 }
+.scroll{
+	overflow-y: scroll;
+}

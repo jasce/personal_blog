@@ -1,23 +1,32 @@
-<%=form_for @post do |f| %>
-	<% if @post.errors.any? %>
-		<h2><%= pluralize(@post.errors.count,"error") %> prevented this post from saving </h2>
-		<ul>
-			<% @post.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<%=form_for @post do |f| %>
+				<% if @post.errors.any? %>
+					<h2><%= pluralize(@post.errors.count,"error") %> prevented this post from saving </h2>
+					<ul>
+						<% @post.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
+					</ul>
+
+				<% end %>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.label :title ,class: ' col-form-label' %><br>
+				<%= f.text_field :title ,  class: 'form-control' %>
+				</div>
+				<br><br>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.label :content,"Write your aricle here" , class: ' col-form-label' %><br>
+				<%= f.text_area :content , class: 'form-control scroll', rows: 10 %>
+				</div>
+				<br>
+				<br>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.submit %>
+				</div>
 			<% end %>
-		</ul>
+		</div>
+	</div>
+</div>
 
-	<% end %>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %>
-	<br><br>
-
-	<%= f.label :content,"Write your aricle here" %><br>
-	<%= f.text_area :content %>
-
-	<br>
-	<br>
-
-	<%= f.submit %>
-
-<% end %>
