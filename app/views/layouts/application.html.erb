@@ -15,25 +15,25 @@
 </head>
 <body>
 
-<nav class="navbar navbar-dark  bg-info <%= yield(:nav_style) %>">
+<nav class="navbar navbar-dark " style="background-color: #2b334b;">
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
   <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-    <a class="navbar-brand" href="#">Jasmeet Singh</a>
+    <%= link_to 'Jasmeet Singh', root_path , class: 'navbar-brand'%>
     
    		<ul class="nav navbar-nav float-lg-right">
       	<li class="nav-item">
-        <a class="nav-link" href="#">Resume<span class="sr-only">(current)</span></a>
+         <%= link_to 'About' , about_path , class: 'nav-link' %> 
       </li>
 
       <li class="nav-item ">
-        <a class="nav-link" href="#">Projects<span class="sr-only">(current)</span></a>
+        <%= link_to 'Projects' , projects_path , class: 'nav-link' %> 
       </li>
 
        <li class="nav-item ">
-        <a class="nav-link" href="#">Github<span class="sr-only">(current)</span></a>
+         <%= link_to 'Github' , github_path , class: 'nav-link' %> 
       </li>
        <li class="nav-item ">
-        <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
+         <%= link_to 'Blog' , posts_path , class: 'nav-link' %> 
       </li>
       </ul>
       

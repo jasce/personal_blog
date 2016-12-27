@@ -26,20 +26,28 @@ html .main-banner{
   filter: blur(0.95px);*/
   
 }
-html .banner .overlay{
-	background-size: cover;
-	background: url('intro-bg.jpg') no-repeat center center;
-}
+
 html .banner h2{
-	padding-top: 300px;
-	font-size: 48px;
-	color: #fff;
+	padding-top: 0px;
+	font-size: 48px;	
 	font-weight: 600;
 	letter-spacing: 2.5px;
-	left: 25%;
-	position: absolute;
+	text-align: center;
+	color: #fff;	
 	z-index: 999;
+	margin-bottom: 25px;
 }
-html .banner span#rotate{
-	color: #ff6600;
+
+.rounded-circle{
+	margin: 180px 0px 30px 0px;
+}
+#different{
+	color: #eee;
+	border-color: #eee;
+	&:hover{
+		color: #fff;
+		background-color: #141d38;
+		border:none;
+	
+	}
 }

@@ -1,11 +1,19 @@
-	<% provide(:nav_style, "transparent-nav") %>
+	
 
 	<section class="banner main-banner">
-		<div class="overlay"></div>
+	 
+		<div class="overlay">		
 		<div class="container">
 			<div id="image" class="hidden-xs">
-				<h2 >I am a <span id="rotate"></span> .</h2>	
+				<div style="text-align: center;">
+				<%= image_tag("back3.jpg" , class: "rounded-circle" , height: 125) %>
+				</div>
+				 <h2 id="rotate">.</h2>	
 			</div>
+			<div style="text-align: center;">
+				<button id= "different" class="btn btn-outline-primary">Download Resume</button>
+			</div>
+		</div>
 		</div>
 
 	</section>

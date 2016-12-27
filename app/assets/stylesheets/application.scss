@@ -26,6 +26,7 @@ div.card-block a i{
 	margin-right: 28px;
 	margin-top: 25px;	
 	font-size:18px;
+	color: #141d38;
 }
 .title{
 	letter-spacing: 2.5px;
@@ -37,4 +38,16 @@ div.card-block a i{
 }
 a{
 	text-decoration: none;
+	color: #141d38;
+}
+.about-btn
+{
+	color: #141d38;
+	border-color: #141d38;
+	&:hover{
+		color: #fff;
+		background-color: #141d38;
+		border:none;
+	
+	}
 }

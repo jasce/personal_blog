@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'resume/index'
-
-  get 'github/index'
+  get '/about',to: 'about#index'
+  get '/github', to: 'github#index' 
 
   devise_for :users
  resources :posts
