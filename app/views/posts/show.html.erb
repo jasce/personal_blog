@@ -1,33 +1,39 @@
+<p style="padding: 25px;"></p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">		
+				<div style="text-align: center;margin-bottom: 60px;">
+					<h1 class="title-project"><%= @post.title %></h1>
+					<p class="text-muted"><%= @post.created_at.strftime('%A, %B %d') %></p>					
+				
+				</div>
+				
+				<div id="content" class="description">
+					<%= markdown @post.content %>
+					
+				</div>
+				<% if user_signed_in? %>
+					<div id="admin_links">
+						<%= link_to "Edit Article",edit_post_path(@post) %>
+						<%= link_to "Delete Article",post_path(@post),method: :delete,data:{confirm: "Are you sure?"} %>
+					</div>
+					<% end %>
+				<hr>
+			<div id="share_box">
+				<p style="text-align: center;">Share this Post</p>
+				<a style="margin-left: 35px;"onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @jasmeetsingh - &amp;url=<%= url_for([@post, {only_path: false}])%>','_blank','width=800,height=500,top=200,left=300');void(0);">
+				<i class="fa fa-twitter"></i></a>
+				<a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<% url_for([@post, {only_path: false}])%>','_blank','width=800,height=500,top=200,left=300');void(0);"><i class="fa fa-facebook"></i></a>
+				<a onclick="javascript:window.open('http://plus.google.com/share?url=<%= url_for([@post, {only_path: false}])%>','_blank','width=800,height=500,top=200,left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+			</div>
 
+			<hr>
+			<%= render 'disqus' %>
 
-<div id="post_show_content" class="skinny_wrapper wrapper_padding">
-	<header>
-		<p class="date"><%= @post.created_at.strftime('%A,%B %d') %></p>
-		<h1><%= @post.title %></h1>
-		<hr>
-	</header>
-	<div id="content">
-		<%= markdown @post.content %>
 		
-	</div>
-	<% if user_signed_in? %>
-		<div id="admin_links">
-			<%= link_to "Edit Article",edit_post_path(@post) %>
-			<%= link_to "Delete Article",post_path(@post),method: :delete,data:{confirm: "Are you sure?"} %>
+
+
 		</div>
-		<% end %>
-	<hr>
-<div id="share_box">
-	<p>Share the Do list</p>
-	<a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @jasmeetsingh - &amp;url=<%= url_for([@post, {only_path: false}])%>','_blank','width=800,height=500,top=200,left=300');void(0);">
-	<i class="fa fa-twitter"></i></a>
-	<a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<% url_for([@post, {only_path: false}])%>','_blank','width=800,height=500,top=200,left=300');void(0);"><i class="fa fa-facebook"></i></a>
-	<a onclick="javascript:window.open('http://plus.google.com/share?url=<%= url_for([@post, {only_path: false}])%>','_blank','width=800,height=500,top=200,left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+	</div>
 </div>
-
-<hr>
-<%= render 'disqus' %>
-
-</div>
-
 

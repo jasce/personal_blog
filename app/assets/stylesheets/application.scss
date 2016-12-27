@@ -31,9 +31,19 @@ div.card-block a i{
 .title{
 	letter-spacing: 2.5px;
 	text-transform:uppercase;
-	font-size: 30px;
+	font-size: 32px;
 	text-align: center;
 	margin-bottom: 55px;
+	color: #141d38;
+
+}
+.title-project{
+	letter-spacing: 2.5px;
+	text-transform:uppercase;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 5px;
+	color: #141d38;
 
 }
 a{
@@ -44,10 +54,35 @@ a{
 {
 	color: #141d38;
 	border-color: #141d38;
-	&:hover{
+	&:hover,&:active,&:focus{
 		color: #fff;
 		background-color: #141d38;
 		border:none;
 	
 	}
+
+}
+/* For Posts */
+
+div.post {
+	padding: 30px 20px;
+}
+div.post p{
+	margin-bottom: 20px;
+}
+div.post h2 a{
+	text-decoration: none;
+
+}
+.description{
+	text-align: justify;
+}
+#share_box{
+	text-align:center;
+}
+a i{
+	margin-right: 30px;
+	margin-top: 25px;	
+	font-size:18px;
+	color: #141d38;
 }

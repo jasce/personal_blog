@@ -1,15 +1,23 @@
-<h1 id="page-title">Stuff I've Written</h1>
-<div id="posts_wrapper"class="skinny_wrapper">
-	<% @posts.each do |post|%>
-		<div class="post">
-			<p class="date"><%= post.created_at.strftime('%A , %B %d') %></p>
-			<h2><a href="#"><%= link_to post.title,post %></a></h2>
-			<hr>
-	
+<p style="padding: 25px;"></p>
 
-		</div>	
-	<% end %>
+<div class="container">
+	<div class="row">
+	<h1 class="title">Posts I've Written</h1>
+		<div class="col-md-8 offset-md-2">				
+					<% @posts.each do |post|%>
+						<div class="post">							
+							<h2><a href="#"><%= link_to post.title,post %></a></h2>
+							<p class="text-muted"><%= post.created_at.strftime('%A , %B %d') %></p>
+							<hr>
+					
+
+						</div>	
+					<% end %>
+				<%=  will_paginate @posts%>
+		</div>
 	</div>
+</div>
 
-<%=  will_paginate @posts%>
+
+
 	

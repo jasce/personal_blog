@@ -1,12 +1,24 @@
-<h1 id="page-title">Stuff I've Built</h1>
-<div id="posts_wrapper"class="skinny_wrapper">
-	<% @projects.each do |project|%>
-		<div class="post">
-			<p class="date"><%= project.created_at.strftime('%A , %B %d') %></p>
-			<h2><a href="#"><%= link_to project.title,project%></a></h2>
-			<hr>
-	
 
-		</div>	
-	<% end %>
+<p style="padding: 25px;"></p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+
+			<h1 class="title">Stuff I've Built</h1>
+				<div >
+					<% @projects.each do |project|%>
+						<div class="post">
+							<h2><a href="#"><%= link_to project.title,project%></a></h2>
+							<p class="text-muted"><%= project.created_at.strftime('%A , %B %d') %></p>
+							<hr>
+					
+
+						</div>	
+					<% end %>
+				</div>
+
+		</div>
 	</div>
+
+</div>
+
