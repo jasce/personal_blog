@@ -102,8 +102,10 @@ div#content {
 	font-size: 107%;
 	margin-bottom: 70px;
 }
-.notice{
-	position: absolute;
-	top:0;
-	z-index: 999;
+div.alert{
+	margin:0px;
 }
+div.alert p{
+	margin:0px;
+}
+

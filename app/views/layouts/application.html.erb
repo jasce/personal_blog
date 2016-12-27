@@ -15,6 +15,17 @@
 </head>
 <body>
 
+
+  <% if notice %>
+  <div class="alert alert-success" role="alert">
+   <p class="notice"><%= notice %></p>
+</div>  
+   <% elsif alert %>
+   <div class="alert alert-warning" role="alert">
+    <p class="alert"><%= alert %></p>
+</div>
+  <% end %>
+
 <nav class="navbar navbar-full navbar-dark " style="background-color: #2b334b;">
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
   <div class="collapse navbar-toggleable-md" id="navbarResponsive">
@@ -34,6 +45,9 @@
       </li>
        <li class="nav-item ">
          <%= link_to 'Blog' , posts_path , class: 'nav-link' %> 
+      </li>
+      <li class="nav-item ">
+         <%= link_to 'Contact' , posts_path , class: 'nav-link' %> 
       </li>
       <li class="nav-item">
     <% if user_signed_in?%>
@@ -55,15 +69,6 @@
 		
 	
 
-	<% if notice %>
-  <div class="alert alert-success" role="alert">
-   <p class="notice"><%= notice %></p>
-</div>	
-	 <% elsif alert %>
-   <div class="alert alert-warning" role="alert">
-    <p class="alert"><%= alert %></p>
-</div>
- 	<% end %>
 
 
 
@@ -87,10 +92,10 @@
 
 <script type="text/javascript">
 var fade_out = function() {
-  $(".notice,.alert").fadeOut().empty();
+  $(".notice,.alert").slideUp(300).fadeOut().empty();
 }
 
-setTimeout(fade_out, 3000);
+setTimeout(fade_out, 2000);
 </script>
 
 <script >
