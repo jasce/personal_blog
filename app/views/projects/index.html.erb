@@ -5,6 +5,11 @@
 		<div class="col-md-8 offset-md-2">
 
 			<h1 class="title">Stuff I've Built</h1>
+			<% if user_signed_in? %>
+				<div style="text-align: center;margin-top: -30px;margin-bottom: 30px;">
+				<%= link_to 'Create New Project' , new_project_path %>
+				</div>
+			<% end %>
 				<div >
 					<% @projects.each do |project|%>
 						<div class="post">

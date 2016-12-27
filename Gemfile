@@ -21,7 +21,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'pygments.rb' 
+gem 'coderay' 
 gem 'redcarpet'
 gem 'friendly_id'
 gem 'will_paginate'
@@ -31,6 +31,7 @@ gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 gem 'github_api'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem "font-awesome-rails"
+
 
 
 

@@ -1,3 +1,9 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+
+
+
 <%=form_for @project do |f| %>
 	<% if @project.errors.any? %>
 		<h2><%= pluralize(@project.errors.count,"error") %> prevented this project from saving </h2>
@@ -8,20 +14,29 @@
 		</ul>
 
 	<% end %>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %>
-	<br><br>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.label :title ,class: ' col-form-label' %><br>
+				<%= f.text_field :title ,  class: 'form-control' %>
+				</div>
+				<br><br>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.label :description,"Write your aricle here" , class: ' col-form-label' %><br>
+				<%= f.text_area :description , class: 'form-control scroll', rows: 10 %>
+				</div>
+				<br>
+				<br>
 
-	<%= f.label :description %><br>
-	<%= f.text_area :description %>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.label :link,"Enter Link" , class: ' col-form-label' %><br>
+				<%= f.text_field :link, class: 'form-control ' %>
+				</div>	
+				<br><br>
 
-	<br>
-	<br>
+				<div class="form-group col-md-10 offset-md-1">
+				<%= f.submit %>
+				</div>
 
-	<%= f.label :link %><br>
-	<%= f.text_field :link %>
-	<br><br>
-
-	<%= f.submit %>
-
-<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>

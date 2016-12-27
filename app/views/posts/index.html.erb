@@ -3,6 +3,12 @@
 <div class="container">
 	<div class="row">
 	<h1 class="title">Posts I've Written</h1>
+
+	<% if user_signed_in? %>
+		<div style="text-align: center;margin-top: -30px;margin-bottom: 30px;">
+		<%= link_to 'Create New Post' , new_post_path %>
+		</div>
+	<% end %>
 		<div class="col-md-8 offset-md-2">				
 					<% @posts.each do |post|%>
 						<div class="post">							

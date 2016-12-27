@@ -56,9 +56,13 @@
 	
 
 	<% if notice %>
-	 <p class="notice"><%= notice %></p>
+  <div class="alert alert-success" role="alert">
+   <p class="notice"><%= notice %></p>
+</div>	
 	 <% elsif alert %>
- 	<p class="alert"><%= alert %></p>
+   <div class="alert alert-warning" role="alert">
+    <p class="alert"><%= alert %></p>
+</div>
  	<% end %>
 
 

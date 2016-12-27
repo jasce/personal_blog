@@ -50,6 +50,7 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.6)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -121,8 +122,6 @@ GEM
       rack (>= 1.2, < 3)
     orm_adapter (0.5.0)
     pg (0.19.0-x86-mingw32)
-    pygments.rb (1.1.0)
-      multi_json (>= 1.0.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -208,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha5)
   byebug
+  coderay
   coffee-rails
   devise
   font-awesome-rails
@@ -217,7 +217,6 @@ DEPENDENCIES
   jquery-rails
   mail_form
   pg
-  pygments.rb
   rails (~> 5.0.0, >= 5.0.0.1)
   rails_12factor
   redcarpet
