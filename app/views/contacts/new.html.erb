@@ -1,1 +1,39 @@
-<p style=""></p>
+<p style="padding: 35px;"></p>
+<div class="container">
+	<div class="row">
+		<h1 class="title">Contact Me</h1>
+		<p style="padding: 10px;"></p>
+		<div class="col-md-8 offset-md-2"> 
+				<%= form_for @contact do |f| %>
+				<div class="form-group row">
+				  <%= f.label :name ,class: "col-md-2 col-form-label" %>
+				  <div class="col-md-10">
+				    <%= f.text_field :name, class: "form-control" , required: true %>
+				  </div>
+				</div>
+				<div class="form-group row">
+				 <%= f.label :email ,class: "col-md-2 col-form-label" %>
+				  <div class="col-md-10">
+				    <%= f.email_field :email, class: "form-control" , required: true %>
+				  </div>
+				</div>
+				<div class="form-group row">
+				 <%= f.label :message ,class: "col-md-2 col-form-label" %>
+				  <div class="col-md-10">
+				   <%= f.text_area :message , class: "form-control", rows: 6, required: true %>
+				  </div>
+				</div>
+				<div class="hidden">
+				 <%= f.label :nickname ,class: "col-md-2 col-form-label" %>
+				  <div class="col-md-10">
+				   <%= f.text_field :nickname, hint: 'leave this field blank', class: "form-control" %>
+				  </div>
+				</div>
+
+				<%= f.submit 'Send Message', class: 'btn btn-outline-primary about-btn offset-md-2' %>
+				<% end %>
+				<p style="padding: 25px;"></p>
+
+		</div>
+	</div>
+</div>
