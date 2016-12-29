@@ -48,9 +48,11 @@
 					<div class="tab-pane" id="activity" role="tabpanel">
 						 <div id="feed"> </div>					  	
 					</div>
-						<div class="tab-pane" id="following" role="tabpanel">
-						
-								  
+						<div class="tab-pane" id="following" role="tabpanel">							  
+
+
+						<% @following.in_groups_of(2,false).each do |stores| %>
+									<div class="row ">  
 									      <%= @followers.each do |f| %>
 									        <div class="col-md-6 offset-md-3">     							             
 												<div class="card">
