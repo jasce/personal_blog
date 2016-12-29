@@ -32,7 +32,7 @@ gem 'github_api'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem "font-awesome-rails"
 
-
+gem 'faraday-http-cache'
 
 
 

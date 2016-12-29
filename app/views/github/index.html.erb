@@ -1,5 +1,118 @@
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+<p style="padding: 25px;"></p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="card">
+					  <%= image_tag(@repos.first.owner.avatar_url , class: "card-img-top")  %>				  
+					  <div class="card-block">
+					    <h4 class="card-title">Jasmeet Singh</h4>
+					    <p class="card-text text-muted"><small>Joined on Jul 23, 2015</small></p>
+					    <a href="#" class="btn btn-outline-success ">Follow Me On Github</a>
+					  </div>
+					</div>
+				</div>
+				<div class="col-md-8 offset-md-1">
+					
+					<ul class="nav nav-tabs" role="tablist">
+					  <li class="nav-item">
+					    <a class="nav-link active" data-toggle="tab" href="#repositories" role="tab">Repositories</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" data-toggle="tab" href="#activity" role="tab">Contributions</a>
+					  </li>
+					  
+					  <li class="nav-item">
+					    <a class="nav-link" data-toggle="tab" href="#following" role="tab">Following</a>
+					  </li>					  
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content" style="max-height: 800px; overflow-y: auto;">
+					  <div class="tab-pane active" id="repositories" role="tabpanel">
+					  <br>
+					  <%= @repos.each do |repo| %>
+					  <h2 class="repo"><%= link_to repo.name , repo.html_url %></h2>
+					  <p class="text-muted"><small ><%= "Updated #{time_ago_in_words(repo.pushed_at)} ago"  %></small>
+					  <span class="text-muted" style="font-size: 16px;"><small style="margin-left: 30px;"><%=repo.language %></small> </span>					  	
+
+					  	<% if repo.fork %>
+						  <span class="text-muted"> <small style="margin-left: 30px;"> Forked Repository</small></span>
+						  <% end %>	
+					  </p>						  
+						  <hr style="margin: 25px 0px;">
+					 	<% end %>
+					 </div>
+
+					<div class="tab-pane" id="activity" role="tabpanel">
+						 <div id="feed"> </div>					  	
+					</div>
+						<div class="tab-pane" id="following" role="tabpanel">
+						
+								  
+									      <%= @followers.each do |f| %>
+									        <div class="col-md-6 offset-md-3">     							             
+												<div class="card">
+												  <%= image_tag(f.avatar_url , class: "card-img-top" )%>
+												  <div class="card-block">
+												    <h4 class="card-title"><%= f.login %></h4>		    
+												    <%= link_to 'Follow' , f.url ,  class: "btn btn-primary" %>
+												  </div>
+												</div>
+									                   
+									        </div> 
+									      <% end %>								  						
+								
+						</div>
+					
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	GitHubActivity.feed({
+    username: "jasce",
+    repository: "", // optional
+    selector: "#feed",
+    limit: 20 // optional
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1>Github#index</h1>
 <p>Find me in app/views/github/index.html.erb</p>
 Here I m 
-<p style="color:#000;"><%= @repos%></p><br>
-<p style="color:#fff;"><%= @followers%></p>
+
+<%=  @repos.each do |repo| %>
+	<ul>
+		<li style="color: #000;"> <%= repo.name  %></li>
+		<li style="color: #000;"> <%= repo.full_name %></li>
+		<li style="color: #000;"> <%= repo.description  %></li>
+
+		<br>
+		<li style="color: #000;"> <%= repo  %></li>
+	</ul>
+	
+<% end %>
+
+
+
+
+
