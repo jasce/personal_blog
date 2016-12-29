@@ -1,10 +1,8 @@
 class GithubController < ApplicationController
   def index
-  	github = Github.new 
-  	
-  	@repos = github.repos.list user: 'jasce' 	
-  	@followers = github.users.followers 'jasce'  	
-  	@following = github.users.followers.following 'jasce'
+  	github = Github.new oauth_token: ENV['GITOAUTH']	
+  	@repos = github.repos.list user: 'jasce'   	  	 	
+  	@following = github.users.followers.following.to_ary
 
   end
 end
