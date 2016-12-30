@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require tether
 //= require bootstrap-sprockets
 //= require turbolinks
+
 //= require_tree .
 
 // Mustache.js
@@ -25,17 +26,6 @@ function millisecondsToStr(a){"use strict";function b(a){return a>1?"s ago":" ag
 
 
 
-$(document).ready(function(){
-	
-	GitHubActivity.feed({
-    username: "jasce",
-    limit: 15 ,
-    repository: "", // optional
-    selector: "#feed",
-     // optional
-});
-
-});
 
 
 

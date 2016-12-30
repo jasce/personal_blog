@@ -90,6 +90,7 @@
 </div>
 </div>
 
+
 <script type="text/javascript">
 var fade_out = function() {
   $(".notice,.alert").slideUp(300).fadeOut().empty();
@@ -107,6 +108,28 @@ function rotateTerm() {
 }
 $(rotateTerm);
 </script>
+
+<script type="text/javascript">
+var fade_out = function() {
+  $(".notice,.alert").slideUp(300).fadeOut().empty();
+}
+
+setTimeout(fade_out, 2000);
+</script>
+
+<script >
+function a() {
+GitHubActivity.feed({
+    username: "jasce",
+    limit: 15 ,
+    repository: "", // optional
+    selector: "#feed",
+     // optional
+});
+}
+$(a);
+</script>
+
 
 </body>
 </html>
