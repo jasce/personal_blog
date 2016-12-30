@@ -7,7 +7,7 @@ attribute :nickname,  :captcha  => true
 	def headers
 		{
 		:subject => "Contact Form",
-		:to => "jasmeetsinghosan@gmail.com",
+		:to => "jascee.gtbit@gmail.com",
 		:from => %("#{name}" <#{email}>)
 		}
 	end
