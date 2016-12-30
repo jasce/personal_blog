@@ -104,6 +104,8 @@ GEM
     mail_form (1.6.0)
       actionmailer (>= 3.2, < 5.1)
       activemodel (>= 3.2, < 5.1)
+    metamagic (3.1.7)
+      rails (>= 3.0.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -221,6 +223,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mail_form
+  metamagic
   pg
   rails (~> 5.0.0, >= 5.0.0.1)
   rails_12factor

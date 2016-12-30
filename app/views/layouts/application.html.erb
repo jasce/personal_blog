@@ -2,10 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://ogp.me/ns/fb#">
 <head>
-  <title>Jasmeet Singh - Developer</title>
-
+  
+ <%= metamagic %>
 	
-<meta property="og:image" content="https://jasmeet.herokuapp.com/assets/intro-bg.jpg" />
 
 
 	
@@ -19,6 +18,18 @@
 
 </head>
 <body>
+<%
+meta title: 'Jasmeet Singh- Portfolio Website',
+     description: "I'm a developer &amp; Computer Science Engineering Student living in Subhash Nagar, New Delhi. I have been working both as consultant and developer for many small scale businesses/startups from the past one and a half years.",    
+ keywords: %w(rails5 ruby rails windows devise carrierwave blog)  
+%>
+<%
+meta og: {
+  image: "http://jasmeet.herokuapp.com/assets/intro-bg.jpg",
+  title: 'Jasmeet Singh- Portfolio Website',
+  type: 'blog'
+}
+%>
 
 
   <% if notice %>

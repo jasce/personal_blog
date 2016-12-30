@@ -1,3 +1,17 @@
+<%
+meta title: @post.title,
+     description: @post.content.gsub(/[^a-zA-Z. ]/, '').truncate_words(50),    
+ keywords: %w(rails5 ruby rails windows devise carrierwave blog)  
+%>
+<%
+meta og: {
+  image: "http://jasmeet.herokuapp.com/assets/intro-bg.jpg",
+  title: @post.title,
+  type: 'blog'
+}
+%>
+
+
 <p style="padding: 25px;"></p>
 <div class="container">
 	<div class="row">
