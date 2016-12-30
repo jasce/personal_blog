@@ -2,7 +2,7 @@
 @import "bootstrap";
 @import "homepage";
 @import "font-awesome";
-@import 'pygments';
+
 
 
 body{
@@ -11,6 +11,7 @@ body{
 }
 .footer{	
 	background-color: #161616;
+	margin-top:5px;
 }
 .footer .container{
 	padding:45px 15px 5px 15px;
