@@ -1,5 +1,5 @@
 <%
-meta title: @post.title,
+meta title: @post.title.to_s + ' | Jasmeet Singh',
      description: @post.content.gsub(/[^a-zA-Z. ]/, '').truncate_words(50),    
  keywords: %w(rails5 ruby rails windows devise carrierwave blog)  
 %>

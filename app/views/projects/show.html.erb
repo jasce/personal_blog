@@ -1,7 +1,7 @@
 <%
-meta title: @project.title,
+meta title: @project.title.to_s + ' | Jasmeet Singh' ,
      description: @project.description.gsub(/[^a-zA-Z. ]/, '').truncate_words(50),    
- keywords: %w(rails5 ruby rails windows devise carrierwave blog)  
+ keywords: %w(rails5 ruby rails windows devise carrierwave blog gem)  
 %>
 <%
 meta og: {
