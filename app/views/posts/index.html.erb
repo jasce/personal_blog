@@ -27,7 +27,7 @@ meta og: {
 					<% @posts.each do |post|%>
 						<div class="post">							
 							<h2><a href="#"><%= link_to post.title,post %></a></h2>
-							<p class="text-muted"><%= post.created_at.strftime('%A , %B %d') %></p>
+							<p class="text-muted"><%= post.created_at.strftime('%A , %B %d, %Y') %></p>
 							<hr>
 					
 
