@@ -224,7 +224,7 @@ DEPENDENCIES
   jquery-rails
   mail_form
   metamagic
-  pg
+  pg (~> 0.18)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails_12factor
   redcarpet
