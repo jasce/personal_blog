@@ -17,7 +17,7 @@ html .banner{
 }
 html .main-banner{
 	background-color: #222;
-	background: url('back.jpg') no-repeat;
+	background: url('back-lap.jpeg') no-repeat;
 	background-position: center 80%;
 	background-size: cover;
 	/*-webkit-filter: blur(0.95px);
