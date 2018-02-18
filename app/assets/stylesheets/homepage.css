@@ -12,12 +12,13 @@ html{
 }
 html .banner{
 	background-size: cover;
-	height: 650px;
+	height: 100vh;
 	z-index: 0;
 }
 html .main-banner{
 	background-color: #222;
-	background: url('intro-bg.jpg') no-repeat center center;
+	background: url('back.jpg') no-repeat;
+	background-position: center 80%;
 	background-size: cover;
 	/*-webkit-filter: blur(0.95px);
   -moz-filter: blur(0.95px);
@@ -46,7 +47,7 @@ html .banner h2{
 	border-color: #eee;
 	&:hover{
 		color: #fff;
-		background-color: #141d38;
+		background-color: #212121;
 		border:none;
 	
 	}
