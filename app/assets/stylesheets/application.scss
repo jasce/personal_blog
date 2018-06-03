@@ -6,9 +6,89 @@
 
 
 body{
-	
-	/*margin-top:20px;*/
+	font-family: 'Open Sans', sans-serif;
 }
+.hero-wrapper {
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	padding-top: 100px;
+	color: #fff;
+	& > h1 {
+		font-size: 70px;
+	}
+	& > h2 {
+		font-size: 45px;
+	}
+}
+
+.react-container {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	position: relative;
+}
+
+.react-wrapper {
+	&::before {
+		position: absolute;
+		content: '';
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 50%;
+		border: 3px solid rgba(255, 255, 255, 0.8);
+		height: 60px;
+		width: 175px;
+		transform: rotate(60deg);
+		margin: auto;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 50%;
+		border: 3px solid rgba(255, 255, 255, 0.8);
+		height: 60px;
+		width: 175px;
+		transform: rotate(-60deg);
+		margin: auto;
+	}
+}
+
+.react-subwrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 50%;
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	height: 60px;
+	width: 175px;
+	transform: rotate(180deg);
+	margin: auto;
+
+	&::before {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		position: absolute;
+		content: '';
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.8);
+		margin: auto;
+	}
+}
+
+
+
 .footer{	
 	background-color: #161616;
 	margin-top:5px;
