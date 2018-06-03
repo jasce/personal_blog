@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby "2.2.5"
+ruby "2.5.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.2'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -30,7 +30,7 @@ gem 'mail_form'
 gem 'devise'
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 gem 'github_api'
-gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'bootstrap', '~> 4'
 gem "font-awesome-rails"
 gem 'tether-rails'
 gem 'faraday-http-cache'
@@ -48,7 +48,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 end
 group :development do
-	gem 'sqlite3'
+	gem 'sqlite3', git: "https://github.com/sparklemotion/sqlite3-ruby"
 end
 group :production do
 	gem 'pg', '~> 0.18'
